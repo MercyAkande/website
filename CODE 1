@@ -1,0 +1,201 @@
+import React from "react";
+
+// Default export React component for a single-file previewable site
+// Tailwind classes are used for styling (no external CSS import required in preview)
+
+export default function AutomatedFeederSite() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+      <header className="bg-white shadow">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 py-6 flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-semibold">AF</div>
+            <div>
+              <h1 className="text-lg font-semibold">Automated Feeder — Project</h1>
+              <p className="text-sm text-gray-500">Computer vision + ML for fair, individualized pet feeding</p>
+            </div>
+          </div>
+          <nav className="hidden md:flex items-center space-x-6 text-sm text-gray-600">
+            <a href="#overview" className="hover:text-gray-900">Overview</a>
+            <a href="#knowledge" className="hover:text-gray-900">State of Knowledge</a>
+            <a href="#ethics" className="hover:text-gray-900">Ethics</a>
+            <a href="#diagrams" className="hover:text-gray-900">Diagrams</a>
+            <a href="#contact" className="px-4 py-2 bg-indigo-600 text-white rounded-md">Reference Site</a>
+          </nav>
+        </div>
+      </header>
+
+      <main className="max-w-6xl mx-auto px-6 lg:px-8 py-12">
+        <section id="overview" className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div className="lg:col-span-2 bg-white rounded-2xl shadow p-8">
+            <h2 className="text-2xl font-bold mb-3">Project Summary</h2>
+            <p className="text-gray-700 leading-relaxed">An automated feeder that uses computer vision and machine learning to distinguish between different pets in the same household. Each pet is recognized individually, and the system dispenses the right food, ensuring fairness and tailored nutrition.</p>
+
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <figure className="rounded-lg overflow-hidden border">
+                {/* Inline SVG placeholder as project image */}
+                <svg className="w-full h-48 bg-gray-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" preserveAspectRatio="none">
+                  <rect width="600" height="300" fill="#f3f4f6" />
+                  <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#9ca3af" fontSize="20">Project Image Placeholder</text>
+                </svg>
+                <figcaption className="p-3 text-sm text-gray-500">Project Image — camera + feeder concept</figcaption>
+              </figure>
+
+              <div className="p-4 bg-gray-50 rounded-lg border">
+                <h3 className="font-semibold">Intent &amp; Purpose</h3>
+                <p className="text-sm text-gray-600 mt-2">This project rethinks personalization in domestic systems, probing ethics of fairness, identity, and agency. It draws inspiration from Radical Software-era ideas of decentralization and repurposing technology as a tool for social reflection.</p>
+                <ul className="mt-3 text-sm text-gray-600 space-y-1">
+                  <li>De-standardization: identify species &amp; individual needs.</li>
+                  <li>Decentralization: owner decisions, smart enforcement.</li>
+                  <li>Ethical provocation: questions about equality vs. equity.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <aside className="bg-white rounded-2xl shadow p-6">
+            <h3 className="text-xl font-semibold">Quick Facts</h3>
+            <dl className="mt-4 text-sm text-gray-700 space-y-3">
+              <div>
+                <dt className="font-medium">Technologies</dt>
+                <dd>Computer Vision, Machine Learning, Python, JavaScript, Arduino</dd>
+              </div>
+              <div>
+                <dt className="font-medium">Design Tools</dt>
+                <dd>Figma, Axure — Interaction &amp; UX prototyping</dd>
+              </div>
+              <div>
+                <dt className="font-medium">Key Questions</dt>
+                <dd>How do we model fairness? What are ethical boundaries of personalization?</dd>
+              </div>
+            </dl>
+          </aside>
+        </section>
+
+        <section id="knowledge" className="mt-12 bg-white rounded-2xl shadow p-8">
+          <h2 className="text-2xl font-bold mb-4">State of Knowledge of the Field</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <article>
+              <h4 className="font-semibold">AI &amp; CV Foundations</h4>
+              <p className="text-sm text-gray-600 mt-2">Basic knowledge of AI concepts, including computer vision and machine learning fundamentals. Typical pipelines include data collection, model training (classification / detection), and deployment on edge devices.</p>
+            </article>
+            <article>
+              <h4 className="font-semibold">Programming</h4>
+              <p className="text-sm text-gray-600 mt-2">Programming skills in Python, Java, and JavaScript, with experience applying APIs and simple ML models. Familiarity with TensorFlow / PyTorch and ONNX for model export is helpful.</p>
+            </article>
+            <article>
+              <h4 className="font-semibold">Interaction &amp; Physical Prototyping</h4>
+              <p className="text-sm text-gray-600 mt-2">Foundations in interaction design and UX, experience creating prototypes in Figma/Axure, and physical computing with Arduino for actuating feeders.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="ethics" className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="bg-white rounded-2xl shadow p-6">
+            <h2 className="text-2xl font-bold mb-3">Ethical &amp; Radical Implications</h2>
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left text-gray-600">
+                  <th className="pb-2">Question</th>
+                  <th className="pb-2">Why It Matters</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="align-top border-t">
+                  <td className="py-3 pr-4">What does it mean to recognize each pet as an individual rather than a generic consumer of resources?</td>
+                  <td className="py-3 text-gray-600">Raises questions about identity, dignity, and boundaries of personalization in tech.</td>
+                </tr>
+                <tr className="align-top border-t">
+                  <td className="py-3 pr-4">Should tech enforce human decisions or embody ethical values of fairness?</td>
+                  <td className="py-3 text-gray-600">Challenges neutrality vs. active shaping of behaviors and relationships.</td>
+                </tr>
+                <tr className="align-top border-t">
+                  <td className="py-3 pr-4">How might species boundaries reflect human systems of classification?</td>
+                  <td className="py-3 text-gray-600">Links pet care to broader debates on equity, gatekeeping, and inclusion.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow p-6">
+            <h3 className="text-lg font-semibold mb-2">Context: Radical Software (1970s)</h3>
+            <p className="text-sm text-gray-600">The radical spirit emphasized decentralization, personalization, and questioning dominant structures. Media tools were reimagined as instruments to redistribute agency and provoke reflection. Applied to our feeder: de-standardization, decentralization, empowerment, and ethical provocation.</p>
+
+            <div className="mt-4">
+              <h4 className="font-medium">Design Provocations</h4>
+              <ul className="text-sm text-gray-600 mt-2 space-y-2">
+                <li>What does a system that enforces fairness look like in practice?</li>
+                <li>How do we ensure a transparent ML decision process for owners?</li>
+                <li>How to design fail-safe mechanisms that prioritize wellbeing?</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="diagrams" className="mt-12 bg-white rounded-2xl shadow p-8">
+          <div className="flex items-start justify-between">
+            <h2 className="text-2xl font-bold">Maps &amp; Diagrams</h2>
+            <a className="text-sm text-indigo-600" href="https://infinitymirror.antikythera.org/" target="_blank" rel="noreferrer">Reference: Infinity Mirror</a>
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-semibold mb-2">Ontography diagram</h4>
+              <p className="text-sm text-gray-600">(Visuals here would show relationships between pets, feed resources, sensing stack, and ethical overlays.)</p>
+              <div className="mt-4 h-40 bg-gray-100 rounded flex items-center justify-center text-gray-400">Diagram placeholder</div>
+            </div>
+
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-semibold mb-2">Forking Paths — Project Diagram</h4>
+              <p className="text-sm text-gray-600">(Decision trees: model choices, edge vs cloud, owner overrides, failure modes.)</p>
+              <div className="mt-4 h-40 bg-gray-100 rounded flex items-center justify-center text-gray-400">Diagram placeholder</div>
+            </div>
+
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-semibold mb-2">Reflections on Barriers to Entry</h4>
+              <ul className="text-sm text-gray-600 list-disc pl-5">
+                <li>Data scarcity for less common pet species.</li>
+                <li>Hardware cost &amp; robustness for messy environments.</li>
+                <li>Regulatory and ethical concerns around automated feeding and animal safety.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 border rounded-lg">
+              <h4 className="font-semibold mb-2">Computational Challenges Map</h4>
+              <p className="text-sm text-gray-600">(Detection under occlusion, real-time latency, model fairness across breeds and sizes.)</p>
+              <div className="mt-4 h-40 bg-gray-100 rounded flex items-center justify-center text-gray-400">Challenge map placeholder</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="implementation" className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 bg-white rounded-2xl shadow p-6">
+            <h2 className="text-2xl font-bold mb-3">Implementation Sketch</h2>
+            <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700">
+              <li>Collect labeled images for each household pet (camera angle, lighting variety).</li>
+              <li>Train a lightweight classifier / detector and export to ONNX or a TinyML format.</li>
+              <li>Run inference on an edge device (Raspberry Pi / Coral) and trigger an Arduino-controlled feeder.</li>
+              <li>Provide owner controls: feeding schedules, manual overrides, nutrition profiles.</li>
+              <li>Logging, explainability, and fail-safe safety checks (e.g., food levels, blockage detection).</li>
+            </ol>
+          </div>
+
+          <aside className="bg-white rounded-2xl shadow p-6">
+            <h3 className="font-semibold">MVP Checklist</h3>
+            <ul className="mt-3 text-sm text-gray-600 space-y-2">
+              <li>Model that achieves >90% recognition on household pets.</li>
+              <li>Edge inference under 200 ms.</li>
+              <li>Simple owner UI for overrides and nutrition settings.</li>
+              <li>Mechanical actuator that dispenses portioned food reliably.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section id="footer" className="mt-14 text-center text-sm text-gray-600">
+          <p>Built as a rapid site for speculative design exploration. Inspired by the layout and experimental style of the referenced site.</p>
+          <p className="mt-2">Want this exported as HTML / a Next.js page or a deployable repo? I can generate that file for you.</p>
+        </section>
+      </main>
+    </div>
+  );
+}
